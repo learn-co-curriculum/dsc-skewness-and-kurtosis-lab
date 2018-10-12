@@ -6,7 +6,7 @@
 In this lab, we shall look at calculating skewness and kurtosis for a given dataset in python and SciPy. 
 
 ## Objectives
-You will be able to
+You will be able to:
 * Measure, visualize, and interpret the kurtosis of a dataset
 * Measure, visualize, and interpret the skewness of a dataset
 
