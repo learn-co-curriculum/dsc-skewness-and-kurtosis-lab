@@ -45,8 +45,8 @@ print ('Skewness =', skew(x_random))
 print ('kurtosis =', kurtosis(x_random))
 ```
 
-    Skewness = -0.0025781248189666343
-    kurtosis = 0.03976806960642154
+    Skewness = 0.016576181586503327
+    kurtosis = 0.018426084410970933
 
 
 
@@ -102,15 +102,11 @@ print ('kurtosis =', kurtosis(y))
 ```python
 # Your observations here 
 
-# Data is normally distributed but not highly symmetrical. It has more values on left than right
-
-# A high positive skewness is observed as there are slightly more values on the left 
-# side of distribution mean than those on lright side
+# A high positive skewness is observed as there are more values on the left 
+# side of distribution mean than those on right side
 
 # A negative kurtosis value indicates that the distribution has lighter tails 
 # and a flatter peak than the normal distribution. 
-
-# Data is light tailed, and no outliers. 
 ```
 
 ## Level up (Optional)
