@@ -50,7 +50,7 @@ x_random = None
 
 
 
-![png](index_files/index_5_1.png)
+![png](index_files/index_3_1.png)
 
 
 
@@ -94,7 +94,7 @@ Just like above, perform following steps
 
 
 
-![png](index_files/index_10_1.png)
+![png](index_files/index_8_1.png)
 
 
 
@@ -109,10 +109,6 @@ Just like above, perform following steps
 
 #
 ```
-
-## Level up (Optional)
-
-Use the formulas given in th previous lesson to calculate skewness and kurtosis with numpy only. Compare your results to the ones shown using Scipy. Do you see any differences in the results? Try at least one other method to calculate skewness and compare the results to previous ones. 
 
 ## Summary
 
