@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, we shall look at calculating skewness and kurtosis for a given dataset in python and SciPy. 
+In this lab, you'll calculate skewness and kurtosis for a given dataset in SciPy using Python.
 
 ## Objectives
 You will be able to:
@@ -11,14 +11,14 @@ You will be able to:
 * Measure, visualize, and interpret the skewness of a dataset
 
 ## Bring in SciPy
-In the previous lesson, we have seen formulas for calculating skewness and kurtosis for a given dataset. Scipy comes packaged with these functions and  provides an easy way to calculate these two quantities, see [scipy.stats.kurtosis](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html#scipy.stats.kurtosis) and [scipy.stats.skew](scipy.stats.skew). Check out the official SciPy documentation for digging deeper into this. Right now we can use format: 
-> **scipy.stats.kurtosis(x)**
+In the previous lesson, you have seen formulas to calculate skewness and kurtosis for your data. Scipy comes packaged with these functions and provides an easy way to calculate these two quantities, see [scipy.stats.kurtosis](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html#scipy.stats.kurtosis) and [scipy.stats.skew](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html#scipy.stats.skew). Check out the official SciPy documentation to dig deeper into this. Right now you can use: 
+> `scipy.stats.kurtosis(x)`
 
-> **scipy.stats.skew(x)**
+> `scipy.stats.skew(x)`
 
-Where x is a random continuous variable. 
+Where $x$ is a random variable. 
 
-We shall generate two synthetic datasets and measure/visualize and compare their skew and kurtosis in this lab. So lets get to it.
+You'll generate two datasets and measure/visualize and compare their skew and kurtosis in this lab.
 
 
 ```python
@@ -30,11 +30,10 @@ from scipy.stats import kurtosis, skew
 ```
 
 ## Take 1
-Perform following steps
-* Generate a random normal variable `x_random` in numpy with 10,000 values. Set the mean value to 0 and standard deviation to 2
-* Plot a histogram for data, set bins to `auto` (default). 
-* Calculate the skewness and kurtosis for this data distribution using above functions. 
-* Record your observations about calculated values and shape of the data. 
+* Generate a random normal variable `x_random` in numpy with 10,000 values. Set the mean value to 0 and standard deviation to 2.
+* Plot a histogram for the data, set bins to `auto` (default). 
+* Calculate the skewness and kurtosis for this data distribution using the SciPy functions.
+* Record your observations about the calculated values and the shape of the data. 
 
 
 ```python
@@ -58,10 +57,8 @@ x_random = None
 # Your observations here 
 
 
-
-
-
-
+#
+#
 #
 ```
 
@@ -75,11 +72,9 @@ x = np.linspace( -5, 5, 10000 )
 y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2  )  # normal distribution
 ```
 
-Just like above, perform following steps
-
-* Plot a histogram for data (y), set bins to auto (default).
-* Calculate the skewness and kurtosis for this data distribution using above functions.
-* Record your observations about calculated values and shape of the data.
+* Plot a histogram for data $y$, and set bins to auto (default).
+* Calculate the skewness and kurtosis for this data distribution using the SciPy functions.
+* Record your observations about the calculated values and the shape of the data.
 
 
 ```python
@@ -101,12 +96,8 @@ Just like above, perform following steps
 ```python
 # Your observations here 
 
-
-
-
-
-
-
+#
+#
 #
 ```
 
