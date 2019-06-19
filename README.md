@@ -40,8 +40,8 @@ print ('Skewness =', skew(x_random))
 print ('kurtosis =', kurtosis(x_random))
 ```
 
-    Skewness = 0.006529088214677121
-    kurtosis = -0.038154238156399956
+    Skewness = -0.02156601863073961
+    kurtosis = -0.03888624629995174
 
 
 
@@ -57,7 +57,9 @@ print ('kurtosis =', kurtosis(x_random))
 # A very slight negative skewness is observed as there are slightly more values on the right 
 # side of distribution mean than those on left side
 
-# The kurtosis value shows that this distribution is Platykurtic: (Kurtosis < 3)
+
+# The kurtosis value shows that this distribution is Platykurtic: The Kurtosis < 0 . In this implementation
+# of kurtosis (Fisher's), 3 is subtracted from the Pearson kurtosis. Fisher's kurtosis is also known as excess kurtosis.
 
 # Data is light tailed, and has no outliers. 
 ```
@@ -98,13 +100,13 @@ print ('kurtosis =', kurtosis(y))
 # A high positive skewness is observed as there are more values on the left 
 # side of distribution mean than those on right side
 
-# A negative kurtosis value indicates that the distribution has lighter tails 
-# and a flatter peak than the normal distribution. Note that the measure of kurtosis is
-# "comparing" to a normal distribution. Looking at the plot, the distribution is clesrly
-# not normsl. kurtosis values are really mostly useful to look at when your observed curve 
+# A negative kurtosis value indicates that the distribution has thinner tails 
+# and a flatter peak than the normal distribution. It is platykurtiv. Note that the measure of kurtosis is
+# "comparing" to a normal distribution. Looking at the plot, the distribution is clearly
+# not normal. kurtosis values are really mostly useful to look at when your observed curve 
 # bell-shaped and you want to know if your tails are lighter or fatter than a normal distribution
 ```
 
 ## Summary
 
-In this lesson we learned how to calculate, visualize and analyze the skewness and kurtosis for any given distribution. We worked with synthetic datasets at this stage to get the concepts cleared up. Later we shall try these techniques on real datasets to see if they are fit for analysis (or not). 
+In this lesson we learned how to calculate, visualize and analyze the skewness and kurtosis for any given distribution. We worked with synthetic datasets at this stage to get the concepts cleared up. Later we will try these techniques on real datasets to see if they are fit for analysis (or not). 
