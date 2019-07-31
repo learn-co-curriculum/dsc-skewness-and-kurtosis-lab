@@ -26,6 +26,16 @@ import matplotlib.pyplot as plt
 from scipy.stats import kurtosis, skew
 ```
 
+
+```python
+# __SOLUTION__ 
+# Import required libraries
+import numpy as np
+import matplotlib.pyplot as plt
+
+from scipy.stats import kurtosis, skew
+```
+
 ## Take 1
 * Generate a random normal variable `x_random` in numpy with 10,000 values. Set the mean value to 0 and standard deviation to 2.
 * Plot a histogram for the data, set bins to `auto` (default). 
@@ -46,7 +56,7 @@ x_random = None
 
 
 
-![png](index_files/index_3_1.png)
+![png](index_files/index_4_1.png)
 
 
 
@@ -59,6 +69,40 @@ x_random = None
 #
 ```
 
+
+```python
+# __SOLUTION__ 
+x_random = np.random.normal(0, 2, 10000)
+plt.hist(x_random, bins='auto')
+print ('Skewness =', skew(x_random))
+print ('kurtosis =', kurtosis(x_random))
+```
+
+    Skewness = -0.02156601863073961
+    kurtosis = -0.03888624629995174
+
+
+
+![png](index_files/index_6_1.png)
+
+
+
+```python
+# __SOLUTION__ 
+# Your observations here 
+
+# Data is normally distributed (obviously) and thus symmetrical 
+
+# A very slight negative skewness is observed as there are slightly more values on the right 
+# side of distribution mean than those on left side
+
+
+# The kurtosis value shows that this distribution is Platykurtic: The Kurtosis < 0 . In this implementation
+# of kurtosis (Fisher's), 3 is subtracted from the Pearson kurtosis. Fisher's kurtosis is also known as excess kurtosis.
+
+# Data is light tailed, and has no outliers. 
+```
+
 ## Take 2
 
 Let's generate another distribution 
@@ -67,6 +111,13 @@ Let's generate another distribution
 ```python
 x = np.linspace( -5, 5, 10000 )
 y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2  )  # normal distribution
+```
+
+
+```python
+# __SOLUTION__ 
+x = np.linspace( -5, 5, 10000 )
+y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2)
 ```
 
 * Plot a histogram for data $y$, and set bins to auto (default).
@@ -86,7 +137,7 @@ y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2  )  # normal distribution
 
 
 
-![png](index_files/index_8_1.png)
+![png](index_files/index_12_1.png)
 
 
 
@@ -96,6 +147,37 @@ y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2  )  # normal distribution
 #
 #
 #
+```
+
+
+```python
+# __SOLUTION__ 
+plt.hist(y, bins='auto')
+print ('Skewness =', skew(y))
+print ('kurtosis =', kurtosis(y))
+```
+
+    Skewness = 1.109511549276228
+    kurtosis = -0.31039027765889804
+
+
+
+![png](index_files/index_14_1.png)
+
+
+
+```python
+# __SOLUTION__ 
+# Your observations here 
+
+# A high positive skewness is observed as there are more values on the left 
+# side of distribution mean than those on right side
+
+# A negative kurtosis value indicates that the distribution has thinner tails 
+# and a flatter peak than the normal distribution. It is platykurtiv. Note that the measure of kurtosis is
+# "comparing" to a normal distribution. Looking at the plot, the distribution is clearly
+# not normal. kurtosis values are really mostly useful to look at when your observed curve 
+# bell-shaped and you want to know if your tails are lighter or fatter than a normal distribution
 ```
 
 ## Summary
