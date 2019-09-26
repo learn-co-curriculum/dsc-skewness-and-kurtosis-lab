@@ -11,7 +11,7 @@ You will be able to:
 * Measure, visualize, and interpret the skewness of a dataset
 
 ## Bring in SciPy
-In the previous lesson, you have seen formulas to calculate skewness and kurtosis for your data. Scipy comes packaged with these functions and provides an easy way to calculate these two quantities, see [scipy.stats.kurtosis](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html#scipy.stats.kurtosis) and [scipy.stats.skew](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.skew.html). Check out the official SciPy documentation to dig deeper into this. Otherwise, simply pull up the documentation within the Jupyter notebook using `shit+tab` within the function call or pull up the full documentation with `kurtosis?` or `skew?`, once you have imported these methods from the SciPy package.
+In the previous lesson, you have seen formulas to calculate skewness and kurtosis for your data. SciPy comes packaged with these functions and provides an easy way to calculate these two quantities, see [scipy.stats.kurtosis](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html#scipy.stats.kurtosis) and [scipy.stats.skew](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.skew.html). Check out the official SciPy documentation to dig deeper into this. Otherwise, simply pull up the documentation within the Jupyter notebook using `shit+tab` within the function call or pull up the full documentation with `kurtosis?` or `skew?`, once you have imported these methods from the SciPy package.
 
 Where $x$ is a random variable. 
 
@@ -37,8 +37,8 @@ from scipy.stats import kurtosis, skew
 ```
 
 ## Take 1
-* Generate a random normal variable `x_random` in numpy with 10,000 values. Set the mean value to 0 and standard deviation to 2.
-* Plot a histogram for the data, set bins to `auto` (default). 
+* Generate a random normal variable `x_random` in NumPy with 10,000 values. Set the mean value to 0 and the standard deviation to 2.
+* Plot a histogram of the data, set bins to `auto` (default). 
 * Calculate the skewness and kurtosis for this data distribution using the SciPy functions.
 * Record your observations about the calculated values and the shape of the data. 
 
@@ -171,15 +171,15 @@ print ('kurtosis =', kurtosis(y))
 # Your observations here 
 
 # A high positive skewness is observed as there are more values on the left 
-# side of distribution mean than those on right side
+# side of the distribution mean than those on right side
 
 # A negative kurtosis value indicates that the distribution has thinner tails 
-# and a flatter peak than the normal distribution. It is platykurtiv. Note that the measure of kurtosis is
+# and a flatter peak than the normal distribution. It is platykurtic. Note that the measure of kurtosis is
 # "comparing" to a normal distribution. Looking at the plot, the distribution is clearly
-# not normal. kurtosis values are really mostly useful to look at when your observed curve 
-# bell-shaped and you want to know if your tails are lighter or fatter than a normal distribution
+# not normal. Kurtosis values are really mostly useful to look at when your observed curve 
+# is bell-shaped and you want to know if your tails are lighter or fatter than those of a normal distribution
 ```
 
 ## Summary
 
-In this lesson we learned how to calculate, visualize and analyze the skewness and kurtosis for any given distribution. We worked with synthetic datasets at this stage to get the concepts cleared up. Later we will try these techniques on real datasets to see if they are fit for analysis (or not). 
+In this lesson we learned how to calculate, visualize, and analyze the skewness and kurtosis for any given distribution. We worked with synthetic datasets at this stage to get the concepts cleared up. Later we will try these techniques on real datasets to see if they are fit for analysis (or not). 
