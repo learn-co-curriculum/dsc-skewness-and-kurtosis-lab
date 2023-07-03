@@ -1,4 +1,3 @@
-
 # Skewness and Kurtosis - Lab
 
 ## Introduction
@@ -42,10 +41,15 @@ from scipy.stats import kurtosis, skew
 
 
 ```python
+# Setting a seed for consistent results
+np.random.seed(42)
+
 x_random = None
 
-# Skewness = -0.0025781248189666343
-# kurtosis = 0.03976806960642154
+# With seed set to 42, and if you wrote your code the *exact* way we have it in the solution branch
+# you should get these results:
+# Skewness = 0.001963697766356243
+# kurtosis = 0.026479272360444117
 
 ```
 
@@ -54,7 +58,9 @@ x_random = None
 
 
 
+    
 ![png](index_files/index_4_1.png)
+    
 
 
 
@@ -70,6 +76,10 @@ x_random = None
 
 ```python
 # __SOLUTION__ 
+
+# Setting a seed for consistent results
+np.random.seed(42)
+
 x_random = np.random.normal(0, 2, 10000)
 plt.hist(x_random, bins='auto')
 print ('Skewness =', skew(x_random))
@@ -81,7 +91,9 @@ print ('kurtosis =', kurtosis(x_random))
 
 
 
+    
 ![png](index_files/index_6_1.png)
+    
 
 
 
@@ -124,31 +136,6 @@ y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2)
 
 
 ```python
-
-
-# Skewness = 1.109511549276228
-# kurtosis = -0.31039027765889804
-```
-
-    Skewness = 1.109511549276228
-    kurtosis = -0.31039027765889804
-
-
-
-![png](index_files/index_12_1.png)
-
-
-
-```python
-# Your observations here 
-
-#
-#
-#
-```
-
-
-```python
 # __SOLUTION__ 
 plt.hist(y, bins='auto')
 print ('Skewness =', skew(y))
@@ -160,8 +147,38 @@ print ('kurtosis =', kurtosis(y))
 
 
 
-![png](index_files/index_14_1.png)
+    
+![png](index_files/index_12_1.png)
+    
 
+
+
+```python
+# Your code here:
+
+
+# Skewness = 1.109511549276228
+# kurtosis = -0.31039027765889804
+```
+
+    Skewness = 1.109511549276228
+    kurtosis = -0.31039027765889804
+
+
+
+    
+![png](index_files/index_13_1.png)
+    
+
+
+
+```python
+# Your observations here 
+
+#
+#
+#
+```
 
 
 ```python
