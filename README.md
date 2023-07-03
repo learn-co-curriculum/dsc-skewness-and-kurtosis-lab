@@ -1,4 +1,3 @@
-
 # Skewness and Kurtosis - Lab
 
 ## Introduction
@@ -32,6 +31,10 @@ from scipy.stats import kurtosis, skew
 
 
 ```python
+
+# Setting a seed for consistent results
+np.random.seed(42)
+
 x_random = np.random.normal(0, 2, 10000)
 plt.hist(x_random, bins='auto')
 print ('Skewness =', skew(x_random))
@@ -43,7 +46,9 @@ print ('kurtosis =', kurtosis(x_random))
 
 
 
+    
 ![png](index_files/index_3_1.png)
+    
 
 
 
@@ -88,7 +93,9 @@ print ('kurtosis =', kurtosis(y))
 
 
 
+    
 ![png](index_files/index_8_1.png)
+    
 
 
 
