@@ -1,4 +1,3 @@
-
 # Skewness and Kurtosis - Lab
 
 ## Introduction
@@ -32,10 +31,15 @@ from scipy.stats import kurtosis, skew
 
 
 ```python
+# Setting a seed for consistent results
+np.random.seed(42)
+
 x_random = None
 
-# Skewness = -0.0025781248189666343
-# kurtosis = 0.03976806960642154
+# With seed set to 42, and if you wrote your code the *exact* way we have it in the solution branch
+# you should get these results:
+# Skewness = 0.001963697766356243
+# kurtosis = 0.026479272360444117
 
 ```
 
@@ -44,7 +48,9 @@ x_random = None
 
 
 
+    
 ![png](index_files/index_3_1.png)
+    
 
 
 
@@ -73,6 +79,7 @@ y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2  )  # normal distribution
 
 
 ```python
+# Your code here:
 
 
 # Skewness = 1.109511549276228
@@ -84,7 +91,9 @@ y = 1./(np.sqrt(2.*np.pi)) * np.exp( -.5*(x)**2  )  # normal distribution
 
 
 
+    
 ![png](index_files/index_8_1.png)
+    
 
 
 
